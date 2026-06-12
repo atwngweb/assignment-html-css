@@ -1,0 +1,47 @@
+/* Blog Post */
+/* Cau 1 */
+.blog-post .intro::first-letter {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #e53935;
+  float: left;
+  line-height: 1;
+  margin-right: 4px;
+}
+
+/* Cau 2 */
+.blog-post .intro::first-line {
+  font-style: italic;
+  color: #555;
+}
+
+/* Cau 3 */
+.blog-post ::selection {
+  background: #ffd700;
+  color: #1a1a1a;
+}
+
+/* Search Form */
+/* Cau 4 */
+.search-form input::placeholder {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Cau 5 */
+.search-form input:focus::placeholder {
+  color: red;
+}
+
+/* Quote */
+/* Cau 6 */
+
+.quote-box .quote::before {
+  content: "❝ ";
+}
+
+/* Cau 7 */
+
+.quote-box .quote::after {
+  content: " ❞";
+}

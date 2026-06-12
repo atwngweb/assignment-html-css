@@ -1,0 +1,53 @@
+/* Phần Navbar */
+/* Câu 1 */
+#navbar a {
+  color: #333;
+  text-decoration: none;
+}
+
+/* Câu 2 */
+#navbar > ul > li {
+  display: inline-block;
+  padding: 8px 16px;
+}
+
+/* Câu 3 */
+#navbar > ul > li > ul a {
+  color: red;
+}
+
+/* Phần Content */
+
+/* Câu 1 */
+.content > p {
+  border-left: 3px solid #2196f3;
+  padding-left: 12px;
+}
+
+/* Câu 2 */
+.content h2 + p {
+  font-weight: bold;
+  color: #1a1a2e;
+}
+
+/* Câu 3 */
+
+/* Nếu không muốn thẻ <p> đã css ở dòng 20 bị ảnh hưởng thì dùng cách này */
+/* .content h2 + p ~ p {
+  font-size: 1.05rem;
+  color: #555;
+} */
+
+/* Nếu muốn tất cả thẻ <p> ngang hàng và ngay sau h2 bị ảnh hưởng css thì dùng cách này */
+
+.content h2 ~ p {
+  font-size: 1.05rem;
+  color: #555;
+}
+
+/* Câu 4 */
+
+.content h2,
+p {
+  font-family: "Segoe UI", sans-serif;
+}
