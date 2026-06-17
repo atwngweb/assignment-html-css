@@ -1,0 +1,33 @@
+body {
+  background-color: orange;
+}
+
+.course-box {
+  background-color: #fff;
+  border: 1px solid blue;
+  border-radius: 8px;
+}
+
+.course-box h2 {
+  text-align: center;
+  color: red;
+  text-transform: uppercase;
+}
+
+.course-box .subtitle {
+  text-align: center;
+  color: #ccc;
+  font-style: italic;
+}
+
+.course-box .description {
+  color: rgb(41, 0, 129);
+  line-height: 1.6;
+}
+
+.course-box .note {
+  background-color: pink;
+  border: 1px solid red;
+  text-align: center;
+  font-weight: 800;
+}

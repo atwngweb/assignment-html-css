@@ -1,0 +1,32 @@
+body {
+  background-color: #ccccccd1;
+}
+
+.event-card {
+  background-color: rgba(0, 128, 0, 0.278);
+  border: 1px solid red;
+  border-radius: 16px;
+}
+
+.event-card h2 {
+  color: green;
+  text-align: center;
+  font-size: 32px;
+}
+
+.event-card .time {
+  font-weight: 800;
+  text-align: center;
+}
+
+.event-card .content {
+  color: blue;
+  line-height: 24px;
+}
+
+.event-card .status {
+  background-color: green;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
+}
