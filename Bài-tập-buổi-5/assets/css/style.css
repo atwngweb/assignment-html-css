@@ -1,0 +1,130 @@
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 1.6rem;
+}
+a {
+  text-decoration: none;
+  color: initial;
+}
+img {
+  display: block;
+}
+
+.container {
+  width: 1170px;
+  max-width: calc(100% - 40px);
+  padding: 15px 0px 10px;
+  margin: 0px auto;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar .lists {
+  display: flex;
+  gap: 15px;
+}
+
+.navbar .lists a:hover {
+  color: #ad5727;
+}
+
+.img-desc {
+  width: 100%;
+}
+
+.img-bottom {
+  margin-top: 50px;
+}
+
+.about__takling,
+.about__title {
+  text-align: center;
+}
+
+.about__takling {
+  color: #ad5727;
+}
+
+.about__title {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 3.2rem;
+}
+
+.about__row {
+  justify-content: space-between;
+  display: flex;
+  gap: 20px;
+}
+
+.about__img {
+  width: auto;
+}
+
+.about__img img {
+  width: 100%;
+}
+
+.about__desc {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.about__desc .sub-title {
+  text-align: center;
+  color: #ad5727;
+}
+
+.about__desc .desc {
+  text-align: center;
+  font-weight: 600;
+  font-size: 3.2rem;
+  margin-top: 12px;
+}
+
+.container.bottom {
+  padding: 100px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+.footer__row {
+  margin-top: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.form-input,
+.btn {
+  outline: none;
+  border: none;
+}
+
+.form-input,
+.btn {
+  font-size: 1.6rem;
+  padding: 10px 8px;
+  border: 1px solid #ccc;
+}
+
+.form-input {
+  margin-right: 10px;
+}
+
+.btn {
+  color: #fff;
+  background-color: #3a3a3a;
+  border-color: #3a3a3a;
+}
