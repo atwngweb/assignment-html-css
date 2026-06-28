@@ -1,0 +1,121 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f5f5f5;
+}
+
+.menu {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: #ccc;
+  border-radius: 10px;
+  border: 1px solid #000;
+  user-select: none;
+  cursor: pointer;
+}
+
+.menu:hover {
+  opacity: 0.7;
+}
+
+.menu span {
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 2px;
+  background-color: #000;
+  border-radius: 999px;
+  opacity: 1;
+  transition: all 0.25s;
+}
+
+.menu span:nth-of-type(1) {
+  top: 15px;
+}
+.menu span:nth-of-type(3) {
+  bottom: 15px;
+}
+
+.menu input:checked ~ span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.menu input:checked ~ span:nth-of-type(1) {
+  animation: topBar 0.4s forwards;
+}
+
+.menu:not(:has(input:checked)) span:nth-of-type(1) {
+  animation: topBarReverse 0.4s forwards;
+}
+@keyframes topBar {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(8px) rotate(0);
+  }
+  100% {
+    transform: translateY(8px) rotate(45deg);
+  }
+}
+
+@keyframes topBarReverse {
+  0% {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  50% {
+    transform: translateY(8px) rotate(0);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
+
+.menu input:checked ~ span:nth-of-type(3) {
+  animation: bottomBar 0.4s forwards;
+}
+
+.menu:not(:has(input:checked)) span:nth-of-type(3) {
+  animation: bottomBarReverse 0.4s forwards;
+}
+
+@keyframes bottomBar {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  50% {
+    transform: translateY(-8px) rotate(0);
+  }
+  100% {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@keyframes bottomBarReverse {
+  0% {
+    transform: translateY(-8px) rotate(-45deg);
+  }
+
+  50% {
+    transform: translateY(-8px) rotate(0);
+  }
+
+  100% {
+    transform: translateY(0) rotate(0);
+  }
+}
