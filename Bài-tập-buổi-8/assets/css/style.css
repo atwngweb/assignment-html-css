@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "PT Sans", sans-serif;
+}
+a {
+  color: initial;
+  text-decoration: none;
+}
+i {
+  cursor: pointer;
+  color: #fff;
+}
+
+/* Header */
+.header {
+  width: 100%;
+  height: 70vh;
+}
+
+.header .bg-header {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-image: url(../image/banner-10.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.header .bg-header .opacity {
+  position: absolute;
+  inset: 0;
+  background: #0000008c;
+}
+
+/* Container */
+.header .container {
+  position: relative;
+  width: 1200px;
+  max-width: calc(100% - 40px);
+  margin: 0 auto;
+  padding-top: 50px;
+  z-index: 999;
+}
+
+/* Header inner */
+
+.header .header-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 100px;
+}
+
+.header .header-inner .menu {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header .header-inner .menu .item {
+  position: relative;
+  padding: 10px 0px;
+  cursor: pointer;
+}
+
+.header .header-inner .menu .item a {
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.header .header-inner .action {
+  margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Menu đa cấp */
+.header-inner .menu .item .sub-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+}
+
+.header-inner .menu .item .sub-menu .sub-item {
+  width: 200px;
+  padding: 10px 20px;
+  background: #fff;
+  border-bottom: 1px solid #ccc;
+}
+.header-inner .menu .item .sub-menu .sub-item:hover {
+  background: purple;
+}
+
+.header-inner .menu .item .sub-menu .sub-item:hover a {
+  color: #fff;
+}
+
+.header-inner .menu .item .sub-menu .sub-item a {
+  color: #ccc;
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+/* Hiển thị menu đa cấp */
+.header-inner .menu .item:hover .sub-menu {
+  display: block;
+}
+
+/* Xử lý ô input dưới icon search */
+
+.header-inner .action .box-input {
+  position: absolute;
+  top: 110%;
+  right: 25px;
+  display: none;
+}
+.header-inner .action .box-input .input {
+  outline: none;
+  border: none;
+  width: 200px;
+  height: 40px;
+  padding: 2px 5px;
+  outline: 5px solid #ececec;
+}
+
+.header-inner .action .box-input .box-icon {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: purple;
+}
+
+/* Checked vào icon search hiện ra ô input */
+
+.header-inner .action .search:has(:checked) ~ .box-input {
+  display: block;
+}
+
+/* Xử lý thanh bar để hiển thị menu */
+.header-inner .bar {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 140%;
+}
+
+/* Xử lý text */
+
+.header .content {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  line-height: 1.5;
+}
+
+.header .content .title {
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.header .content .desc {
+  color: #ccc;
+}
+
+/* Responsive */
+
+@media screen and (max-width: 1199.98px) {
+  .header .container {
+    width: 992px;
+  }
+
+  .header .header-inner {
+    gap: 30px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .header .container {
+    width: 768px;
+  }
+
+  .header .header-inner .menu {
+    display: none;
+  }
+
+  .header-inner .bar {
+    display: block;
+  }
+
+  .header .header-inner .menu .item {
+    width: 200px;
+    padding-left: 10px;
+    border-bottom: 1px solid #333;
+  }
+
+  .header-inner .menu .item .sub-menu .sub-item {
+    background: #000;
+    border-bottom: 1px solid #333;
+  }
+
+  .header-inner .menu .item:hover .sub-menu {
+    position: absolute;
+    top: 5px;
+    left: 100%;
+    display: block;
+  }
+
+  .header-inner #show:checked ~ .menu {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    left: 0;
+    top: 200%;
+    background: #000;
+  }
+}
